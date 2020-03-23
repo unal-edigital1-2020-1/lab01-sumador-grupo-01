@@ -28,12 +28,5 @@ module sum4b_TB;
     end
   end      
 
-
-initial begin: TEST_CASE
-     $dumpfile("sum4b_TB.vcd");
-     $dumpvars(-1, uut);
-     #(1280) $finish;
-   end
-
 endmodule
 
