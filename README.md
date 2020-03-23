@@ -1,5 +1,4 @@
 # lab01- implementación sumador de 4 bits
----
 
 ## Intrgrantes
 
@@ -7,9 +6,9 @@
 * Andres Cubillos Nieves
 
 ## Procedimiento
----
-### Sumador de un bit
 
+### Sumador de un bit
+---
 Para la implementacion de un sumador de 4 bits se utilizo el modulo `sum1bcc.v` dado por el profesor el cual consiste 
 en un sumador de un bit completo *(contiene un carry de entrada y uno de salida)* que no fue diseñado apartir de compuertas
 logicas como el modulo `sum1bcc_primitive.v` , si no utilizando registros para almacenar las entradas; esta implementacion es 
@@ -56,7 +55,7 @@ usa para realizar constantemente la operacion en caso de que se realicen cambios
 ~~~
 
 ### Sumador de 4 bits
-
+---
 Ya con el sumador de 1 bit creado se inicia la implementacion de un sumador de 4 bits,el cual consiste en 4 sumadores de un bit funcinando en paralelo,
 debido al tamaño de la tabla de verdad esta no sera ralizada pero se puede ver el bloque funciona para entender la implementacion del sumador
 
