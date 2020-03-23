@@ -19,7 +19,9 @@ Para entender la logica del sumador de un bit se realiza la tabla de verdad de u
 
 En la tabla de verdad se puede ver que se necesitan tres entradas ***(A,B,Cin)*** y dos salida ***(Out,Cout)*** esto se puede de manera 
 mas simple en el siguiente bloque funcional:
+
 ---
+
 Para la creacion del modulo `sum1bcc.v` se declaran las tres entradas ***(A,B,Ci)*** y las dos salidas ***(Cout,S)***
 
 ~~~
@@ -61,7 +63,9 @@ debido al tamaño de la tabla de verdad esta no sera ralizada pero se puede ver 
 
 Como se puede observar se necesitan 8 bits de entrada ***(A0, A1, A2, A3, B0, B1, B2, B3)*** por lo que las combinaciones posibles seran 256 lo que hace 
 complicado la creacion de la tabla de verdad, tambien se tendran 4 salidas y un carry de salida ***(S0, S1, S2, S3, Cout)***
+
 ---
+
 Para la creacion del modulo `Sum4bcc.v` se utilizan 2 registros de entrada ***(xi, yi)***, uno de salida ***(zi)*** y una salida extra para el carry de salida ***(co)***
 
 ~~~
