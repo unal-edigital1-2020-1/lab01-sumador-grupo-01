@@ -61,6 +61,8 @@ usa para realizar constantemente la operacion en caso de que se realicen cambios
 Ya con el sumador de 1 bit creado se inicia la implementacion de un sumador de 4 bits,el cual consiste en 4 sumadores de un bit funcinando en paralelo,
 debido al tamaño de la tabla de verdad esta no sera ralizada pero se puede ver el bloque funcional para entender la implementacion del sumador
 
+[Bloque Funcional Sumador de 4bits](4bits.PNG)
+
 Como se puede observar se necesitan 8 bits de entrada ***(A0, A1, A2, A3, B0, B1, B2, B3)*** por lo que las combinaciones posibles seran 256 lo que hace 
 complicado la creacion de la tabla de verdad, tambien se tendran 4 salidas y un carry de salida ***(S0, S1, S2, S3, Cout)***
 
@@ -100,3 +102,7 @@ En el caso del carry de entrada y de salida de cada modulo ***(s0, s1, s2, s3)**
 ***(c1, c2, c3)***, en el caso del carry de entrada del primer modulo ***(s0)*** se envia el valor 0 ya que al ser el bit menos significativo no se conctara a un modulo anterior a el,
 el carry de salida del primer modulo se conecta a carry de entrada del segundo modulo ***(s1)*** y se continua de esta forma hasta llegar al ultimo modulo ***(s3)*** en el cual se envia **co**
 como carry de salida al no tener un modulo siguiente.
+ 
+### TestBench
+
+En este modulo se crean los estimulos de entrada permitiendo simular y obtener las salidas de los modulos, el TestBench del sumador de 4 bits sera `sum4bcc_TB.v`
