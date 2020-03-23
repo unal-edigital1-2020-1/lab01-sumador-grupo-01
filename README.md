@@ -10,15 +10,18 @@
 ### Sumador de un bit
 
 Para la implementacion de un sumador de 4 bits se utilizo el modulo `sum1bcc.v` dado por el profesor el cual consiste 
-en un sumador de un bit completo *(contiene un carry de entrada y uno de salida)* que no fue diseñado apartir de compuertas
+en un sumador de un bit completo *(contiene un carry de entrada y uno de salida)* que no fue diseñado a partir de compuertas
 logicas como el modulo `sum1bcc_primitive.v` , si no utilizando registros para almacenar las entradas; esta implementacion es 
 mas corta y mas sencilla de entender.
 
 Para entender la logica del sumador de un bit se realiza la tabla de verdad de una suma binaria:  
 
+![Tabla de Verdad Sumador de 1bit](tabla.PNG)
 
 En la tabla de verdad se puede ver que se necesitan tres entradas ***(A,B,Cin)*** y dos salida ***(Out,Cout)*** esto se puede de manera 
 mas simple en el siguiente bloque funcional:
+
+![Bloque Funcional Sumador de 1bit](1bit.PNG)
 
 ---
 
