@@ -57,3 +57,20 @@ usa para realizar constantemente la operacion en caso de que se realicen cambios
 
 ### Sumador de 4 bits
 
+Ya con el sumador de 1 bit creado se inicia la implementacion de un sumador de 4 bits,el cual consiste en 4 sumadores de un bit funcinando en paralelo,
+debido al tamaño de la tabla de verdad esta no sera ralizada pero se puede ver el bloque funciona para entender la implementacion del sumador
+
+Como se puede observar se necesitan 8 bits de entrada ***(A0, A1, A2, A3, B0, B1, B2, B3)*** por lo que las combinaciones posibles seran 256 lo que hace 
+complicado la creacion de la tabla de verdad, tambien se tendran 4 salidas y un carry de salida ***(S0, S1, S2, S3, Cout)***
+
+Para la creacion del modulo `Sum4bcc.v` se utilizan 2 registros de entrada ***(xi, yi)***, uno de salida ***(zi)*** y una salida extra para el carry de salida ***(co)***
+
+~~~
+	module sum4bcc (xi, yi,co,zi);
+
+		input [3 :0] xi;
+  		input [3 :0] yi;
+  		
+		output co;
+  		output [3 :0] zi;
+~~~
