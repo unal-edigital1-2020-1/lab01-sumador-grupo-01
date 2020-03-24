@@ -62,12 +62,12 @@ usa para realizar constantemente la operacion en caso de que se realicen cambios
 ### Sumador de 4 bits
 
 Ya con el sumador de 1 bit creado se inicia la implementacion de un sumador de 4 bits,el cual consiste en 4 sumadores de un bit funcinando en paralelo,
-debido al tamaño de la tabla de verdad esta no sera ralizada pero se puede ver el bloque funcional para entender la implementacion del sumador
+debido al tamaño de la tabla de verdad esta no sera ralizada pero se puede ver el bloque funcional para entender la implementacion del sumador:
 
 ![Bloque Funcional Sumador de 4bits](4bits.PNG)
 
 Como se puede observar se necesitan 8 bits de entrada ***(A0, A1, A2, A3, B0, B1, B2, B3)*** por lo que las combinaciones posibles seran 256 lo que hace 
-complicado la creacion de la tabla de verdad, tambien se tendran 4 salidas y un carry de salida ***(S0, S1, S2, S3, Cout)***
+complicado la creacion de la tabla de verdad, tambien se tendran 4 salidas y un carry de salida ***(S0, S1, S2, S3, Cout)*** .
 
 ---
 
@@ -153,10 +153,14 @@ endmodule
 ~~~
 
 Se inicializa el registro xi y yi con 0 y se crea un ciclo que aumente el valor de yi en 1, cuando este llegue a 16 ***(10000 en binario)*** aumentara la variable x en 1 y volvera a hacer el ciclo ya que como el wire 
-es solo de 4 bits este se desbordara y quedara en 0000. Ademas en cada iteracion con la sentencia $display mostrara en consola el valor en decimal que tiene almacenado cada registro
+es solo de 4 bits este se desbordara y quedara en 0000. Ademas en cada iteracion con la sentencia $display mostrara en consola el valor en decimal que tiene almacenado cada registro.
 
 ---
 
+#### Diagrama Tiempos de Simulacion
+
 ![Simulacion](simulacion.PNG)
+
+#### Resultado en Consola de la Simulacion
 
 ![Resultado en Consola](texto.PNG)
