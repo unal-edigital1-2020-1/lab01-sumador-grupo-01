@@ -32,6 +32,4 @@ module sum4b(xi, yi,co,zi);
   sum1bcc s2 (.A(xi[2]), .B(yi[2]), .Ci(c2), .Cout(c3) ,.S(zi[2]));
   sum1bcc s3 (.A(xi[3]), .B(yi[3]), .Ci(c3), .Cout(co) ,.S(zi[3]));
 
-
-
 endmodule

@@ -59,6 +59,8 @@ usa para realizar constantemente la operacion en caso de que se realicen cambios
 	endmodule 
 ~~~
 
+![1bit](esquematico1.PNG)
+
 ### Sumador de 4 bits
 
 Ya con el sumador de 1 bit creado se inicia la implementacion de un sumador de 4 bits,el cual consiste en 4 sumadores de un bit funcinando en paralelo,
@@ -106,6 +108,8 @@ En el caso del carry de entrada y de salida de cada modulo ***(s0, s1, s2, s3)**
 el carry de salida del primer modulo se conecta a carry de entrada del segundo modulo ***(s1)*** y se continua de esta forma hasta llegar al ultimo modulo ***(s3)*** en el cual se envia **co**
 como carry de salida al no tener un modulo siguiente.
  
+![4bit](esquematico4.PNG)
+
 ### TestBench
 
 En este modulo se crean los estimulos de entrada permitiendo simular y obtener las salidas de los modulos, el TestBench del sumador de 4 bits sera `sum4bcc_TB.v`, para este se necesitan dos registros de entrada ***(xi, yi)*** 
