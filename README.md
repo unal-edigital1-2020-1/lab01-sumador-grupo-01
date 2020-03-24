@@ -108,4 +108,55 @@ como carry de salida al no tener un modulo siguiente.
  
 ### TestBench
 
-En este modulo se crean los estimulos de entrada permitiendo simular y obtener las salidas de los modulos, el TestBench del sumador de 4 bits sera `sum4bcc_TB.v`
+En este modulo se crean los estimulos de entrada permitiendo simular y obtener las salidas de los modulos, el TestBench del sumador de 4 bits sera `sum4bcc_TB.v`, para este se necesitan dos registros de entrada ***(xi, yi)*** 
+y dos wire de salida ***(co, zi)***
+
+~~~
+	`timescale 1ns / 1ps
+
+	module sum4b_TB;
+
+  		reg [3:0] xi;
+	  	reg [3:0] yi;
+
+ 
+ 		wire co;
+  		wire [3:0] zi;
+~~~
+  
+en estos se almacenaran los valores que se enviaran al modulo que procederemos a crear
+
+~~~
+	 sum4b uut (.xi(xi), .yi(yi), .co(co), .zi(zi));
+~~~
+
+la instancia uut *"Instantiate the Unit Under Test"* del modulo `sum4b_TB.v` permite enviar los valores de las entradas y observar los valores de salida, se necesita una forma
+de enviar todos los posibles casos de entrada para poder revisar todos los valores de salida
+
+
+~~~
+    initial begin
+  	
+	xi=0;
+	
+	for (yi = 0; yi < 16; yi = yi + 1) begin
+      
+		if (yi==0)
+        		xi=xi+1;
+      	
+		#5 $display("el valor de %d + %d = %d", xi,yi,zi) ;
+    	end
+    end      
+
+endmodule
+
+~~~
+
+Se inicializa el registro xi y yi con 0 y se crea un ciclo que aumente el valor de yi en 1, cuando este llegue a 16 ***(10000 en binario)*** aumentara la variable x en 1 y volvera a hacer el ciclo ya que como el wire 
+es solo de 4 bits este se desbordara y quedara en 0000. Ademas en cada iteracion con la sentencia $display mostrara en consola el valor en decimal que tiene almacenado cada registro
+
+---
+
+![Simulacion](simulacion.PNG)
+
+![Resultado en Consola](texto.PNG)
