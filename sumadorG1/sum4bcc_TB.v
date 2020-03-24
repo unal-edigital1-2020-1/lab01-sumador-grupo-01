@@ -1,12 +1,12 @@
-`timescale 1ns / 1ps
+`timescale 1ns / 1ps //tiempo de simulacion
 
 module sum4bcc_TB;
 
-  // Inputs
+  // Entradas
   reg [3:0] xi;
   reg [3:0] yi;
 
-  // Outputs
+  // Salidas
   wire co;
   wire [3:0] zi;
 
@@ -19,21 +19,15 @@ module sum4bcc_TB;
   );
 
   initial begin
-  // Initialize Inputs
+  // valores de las entradas
     xi=0;
-	 for (yi = 0; yi < 16; yi = yi + 1) begin
+	 for (yi = 0; yi < 16; yi = yi + 1) begin // ciclo para cambiar los valores de las entradas
       if (yi==0)
         xi=xi+1;
-      #5 $display("El valor de %d + %d = %d", xi,yi,zi) ;
+      #5 $display("El valor de %d + %d = %d", xi,yi,zi) ; // mostrar en pantalla resultados
     end
   end      
 
-
-initial begin: TEST_CASE
-     $dumpfile("sum4bcc_TB.vcd");
-     $dumpvars(1, uut);
-     #(1280) $finish;
-   end
 
 endmodule
 
