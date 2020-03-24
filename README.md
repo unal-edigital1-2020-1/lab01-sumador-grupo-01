@@ -58,6 +58,8 @@ usa para realizar constantemente la operacion en caso de que se realicen cambios
   
 	endmodule 
 ~~~
+ 
+#### Esquematico sumador de  1bit
 
 ![1bit](esquematico1.PNG)
 
@@ -107,6 +109,8 @@ En el caso del carry de entrada y de salida de cada modulo ***(s0, s1, s2, s3)**
 ***(c1, c2, c3)***, en el caso del carry de entrada del primer modulo ***(s0)*** se envia el valor 0 ya que al ser el bit menos significativo no se conctara a un modulo anterior a el,
 el carry de salida del primer modulo se conecta a carry de entrada del segundo modulo ***(s1)*** y se continua de esta forma hasta llegar al ultimo modulo ***(s3)*** en el cual se envia **co**
 como carry de salida al no tener un modulo siguiente.
+
+#### Esquematico sumador de  4bit
  
 ![4bit](esquematico4.PNG)
 
