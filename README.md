@@ -164,3 +164,10 @@ es solo de 4 bits este se desbordara y quedara en 0000. Ademas en cada iteracion
 #### Resultado en Consola de la Simulacion
 
 ![Resultado en Consola](texto.PNG)
+
+### Concluciones
+
+- Verilog permite el diseño de sistemas digitales complejos y permite separarlos en modulos para simprificar el proceso.
+- Existen diferentes formas de implementa un mismo circuito digital
+- vivado es una gran herramienta para la creacion de sistemas digitales pero lo importante es el entendimiento del lenguaje que se va a utilizar
+- adquirir habilidades en logica booleana es importante para facilitar la creacion de codigos eficientes
